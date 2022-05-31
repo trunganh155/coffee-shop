@@ -9,6 +9,7 @@
   background-color: #fff;
   border: 1px solid $text-color;
   cursor: pointer;
+  text-decoration: none;
   transition: all ease-in-out 0.1s;
   &:hover {
     filter: brightness(95%);
