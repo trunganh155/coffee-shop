@@ -1,0 +1,80 @@
+@import "../../../index.scss";
+
+.header {
+  box-shadow: 0 2px 5px #ccc;
+  .header-content {
+    width: 100%;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-left {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      .logo {
+        width: 60px;
+        height: 60px;
+        background-color: #000;
+        border-radius: 50%;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+        }
+      }
+      .navigation {
+        display: flex;
+        gap: 25px;
+        .link {
+          text-decoration: none;
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          color: inherit;
+          font-weight: 550;
+          transition: all ease-in-out 0.1s;
+          &:hover {
+            color: $green-color;
+          }
+        }
+      }
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      .cart {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .number {
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(50%, -40%);
+          z-index: 1;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          background-color: black;
+          border-radius: 50%;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          border: 1px solid #fff;
+        }
+        .icon {
+          display: inline-block;
+          color: inherit;
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}
