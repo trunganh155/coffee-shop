@@ -36,7 +36,7 @@ function Header() {
                             <Button>Sigin in</Button>
                         </div>
                         <div className="join-now">
-                            <Button secondary>Join now</Button>
+                            <Button to='/join now' secondary>Join now</Button>
                         </div>
                     </div>
                 </div>
