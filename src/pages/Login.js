@@ -4,8 +4,11 @@ import * as yup from "yup";
 import "../styles/Login.scss";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Main from "~/layouts/Main";
 
 export default function Login() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   const schema = yup.object().shape({
@@ -28,64 +31,75 @@ export default function Login() {
   const onSubmit = (data) => console.log(data.username);
 
   return (
-    <div className="container">
-      <section className="title">
-        <h1>Sign in</h1>
-      </section>
+    <>
+      <Main>
+        <div className="container">
+          <section className="title">
+            <h1>Sign in</h1>
+          </section>
 
-      <section className="form">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="form__group">
-            <input
-              {...register("username")}
-              placeholder="Username or email address"
-            />
-            {errors.username?.message && (
-              <span>{errors.username?.message}</span>
-            )}
-          </div>
+          <section className="form">
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="form__group">
+                <input
+                  {...register("username")}
+                  placeholder="Username or email address"
+                />
+                {errors.username?.message && (
+                  <span>{errors.username?.message}</span>
+                )}
+              </div>
 
-          <div className="form__group">
-            <input
-              {...register("password")}
-              placeholder="Password"
-              type={showPassword ? "text" : "password"}
-            />
-            {showPassword ? (
-              <BsEye
-                onClick={() => {
-                  setShowPassword(!showPassword);
-                }}
-              />
-            ) : (
-              <BsEyeSlash
-                onClick={() => {
-                  setShowPassword(!showPassword);
-                }}
-              />
-            )}
+              <div className="form__group">
+                <input
+                  {...register("password")}
+                  placeholder="Password"
+                  type={showPassword ? "text" : "password"}
+                />
+                {showPassword ? (
+                  <BsEye
+                    onClick={() => {
+                      setShowPassword(!showPassword);
+                    }}
+                  />
+                ) : (
+                  <BsEyeSlash
+                    onClick={() => {
+                      setShowPassword(!showPassword);
+                    }}
+                  />
+                )}
 
-            {errors.password?.message && (
-              <span>{errors.password?.message}</span>
-            )}
-          </div>
+                {errors.password?.message && (
+                  <span>{errors.password?.message}</span>
+                )}
+              </div>
 
-          <div className="forgotPassword">
-            <a href="#">Forgot your password?</a>
-          </div>
+              <div className="forgotPassword">
+                <a href="#">Forgot your password?</a>
+              </div>
 
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <button className="btnSubmit" type="submit">
-              Sign in
-            </button>
-          </div>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <button className="btnSubmit" type="submit">
+                  Sign in
+                </button>
+              </div>
 
-          <div className="or">
-            <span>Not a member? </span>
-            <span className="navigate">Join now</span>
-          </div>
-        </form>
-      </section>
-    </div>
+              <div className="or">
+                <span>Not a member? </span>
+                <span
+                  className="navigate"
+                  onClick={() => {
+                    navigate("/register");
+                  }}
+                >
+                  Join now
+                </span>
+              </div>
+            </form>
+          </section>
+        </div>
+      </Main>
+    </>
   );
 }

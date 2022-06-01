@@ -1,3 +1,5 @@
+@import "../index.scss";
+
 .container {
     width: 100%;
     display: flex;
@@ -7,6 +9,7 @@
 
     & .title {
         padding: 50px;
+        font-size: 20px;
     }
 
     & .form {
@@ -33,7 +36,7 @@
 
             & span {
                 margin-left: 10px;
-                color: #f32424;
+                color: $red-color;
                 font-size: 15px;
             }
 
@@ -42,6 +45,7 @@
                 top: 22px;
                 right: 14px;
                 transform: translateY(-50%);
+                font-size: 16px;
             }
         }
 
@@ -51,7 +55,7 @@
             margin-top: 5px;
 
             & a {
-                color: #00a862;
+                color: $green-color;
                 text-decoration: none;
 
                 &:hover {
@@ -65,7 +69,7 @@
             margin-top: 30px;
             font-weight: bold;
             font-size: 20px;
-            background-color: #00a862;
+            background-color: $green-color;
             color: #fff;
             border: 0;
             border-radius: 50px;
@@ -81,10 +85,11 @@
         & .or {
             text-align: center;
             padding-top: 20px;
+            font-size: 16px;
 
             & .navigate {
                 text-decoration: none;
-                color: #00a862;
+                color: $green-color;
                 cursor: pointer;
 
                 &:hover {
