@@ -1,0 +1,97 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & .title {
+        padding: 50px;
+    }
+
+    & .form {
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+
+        &__group {
+            position: relative;
+            margin-top: 35px;
+
+            & input {
+                width: 100%;
+                padding: 12px 34px 12px 12px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 16px;
+            }
+
+            & span {
+                margin-left: 10px;
+                color: #f32424;
+                font-size: 15px;
+            }
+
+            & svg {
+                position: absolute;
+                top: 22px;
+                right: 14px;
+                transform: translateY(-50%);
+            }
+        }
+
+        & .forgotPassword {
+            display: flex;
+            justify-content: end;
+            margin-top: 5px;
+
+            & a {
+                color: #00a862;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        & .btnSubmit {
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: #00a862;
+            color: #fff;
+            border: 0;
+            border-radius: 50px;
+            padding: 12px 24px;
+            cursor: pointer;
+            box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+
+        & .guest {
+            text-align: center;
+            padding-top: 20px;
+
+            & .navigate{
+                text-decoration: none;
+                color: #00a862;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.6;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
