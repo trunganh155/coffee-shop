@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import Button from '../../../components/button/Button'
+import Button from '~/components/button/Button'
 import './Header.scss'
 
 function Header() {
@@ -33,10 +33,10 @@ function Header() {
                             <span className="number">2</span>
                         </div>
                         <div className="signin">
-                            <Button>Sigin in</Button>
+                            <Button to='sign-in'>Sign in</Button>
                         </div>
                         <div className="join-now">
-                            <Button to='/join now' secondary>Join now</Button>
+                            <Button to='/join-now' secondary>Join now</Button>
                         </div>
                     </div>
                 </div>
