@@ -1,11 +1,16 @@
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import { Routes, Route } from 'react-router-dom';
+import { publicRoute } from './routes/routes';
 
 function App() {
   return (
     <div className="App">
-      <Login />
-      <Register />
+      <Routes>
+        {
+          publicRoute.map(route => (
+            <Route key={route.id} path={route.url} element={route.page}></Route>
+          ))
+        }
+      </Routes>
     </div>
   );
 }

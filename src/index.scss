@@ -1,5 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&display=swap");
+
+$header-height: 100px;
+$text-color: #212121;
+$green-color: #00754a;
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Neuton", serif;
+}
+body {
+  color: $text-color;
+}
+// variable
+// global class
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
