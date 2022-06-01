@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'
 import { publicRoute } from './routes/routes';
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <Routes>
         {
+          publicRoute.length > 0 &&
           publicRoute.map(route => (
             <Route key={route.id} path={route.url} element={route.page}></Route>
           ))
