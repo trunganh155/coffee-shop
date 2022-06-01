@@ -1,5 +1,5 @@
 import React from 'react'
-import Main from '../layouts/Main'
+import Main from '~/layouts/Main'
 
 function HomePage() {
     return (
