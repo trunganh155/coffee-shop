@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import { publicRoute } from './routes/routes';
+import { publicRoute } from '~/routes/routes';
 
 function App() {
   return (
