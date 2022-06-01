@@ -4,8 +4,11 @@ import * as yup from "yup";
 import "../styles/Register.scss";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Main from "~/layouts/Main";
 
 export default function Register() {
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -34,87 +37,98 @@ export default function Register() {
   const onSubmit = (data) => console.log(data.username);
 
   return (
-    <div className="container">
-      <section className="title">
-        <h1>Create an account</h1>
-      </section>
+    <>
+      <Main>
+        <div className="container">
+          <section className="title">
+            <h1>Create an account</h1>
+          </section>
 
-      <section className="form">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="form__group">
-            <input {...register("username")} placeholder="Username" />
-            {errors.username?.message && (
-              <span>{errors.username?.message}</span>
-            )}
-          </div>
+          <section className="form">
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="form__group">
+                <input {...register("username")} placeholder="Username" />
+                {errors.username?.message && (
+                  <span>{errors.username?.message}</span>
+                )}
+              </div>
 
-          <div className="form__group">
-            <input {...register("email")} placeholder="Email address" />
-            {errors.email?.message && <span>{errors.email?.message}</span>}
-          </div>
+              <div className="form__group">
+                <input {...register("email")} placeholder="Email address" />
+                {errors.email?.message && <span>{errors.email?.message}</span>}
+              </div>
 
-          <div className="form__group">
-            <input
-              {...register("password")}
-              placeholder="Password"
-              type={showPassword ? "text" : "password"}
-            />
-            {showPassword ? (
-              <BsEye
-                onClick={() => {
-                  setShowPassword(!showPassword);
-                }}
-              />
-            ) : (
-              <BsEyeSlash
-                onClick={() => {
-                  setShowPassword(!showPassword);
-                }}
-              />
-            )}
+              <div className="form__group">
+                <input
+                  {...register("password")}
+                  placeholder="Password"
+                  type={showPassword ? "text" : "password"}
+                />
+                {showPassword ? (
+                  <BsEye
+                    onClick={() => {
+                      setShowPassword(!showPassword);
+                    }}
+                  />
+                ) : (
+                  <BsEyeSlash
+                    onClick={() => {
+                      setShowPassword(!showPassword);
+                    }}
+                  />
+                )}
 
-            {errors.password?.message && (
-              <span>{errors.password?.message}</span>
-            )}
-          </div>
+                {errors.password?.message && (
+                  <span>{errors.password?.message}</span>
+                )}
+              </div>
 
-          <div className="form__group">
-            <input
-              {...register("confirm_password")}
-              placeholder="Confirm password"
-              type={showConfirmPassword ? "text" : "password"}
-            />
-            {showConfirmPassword ? (
-              <BsEye
-                onClick={() => {
-                  setShowConfirmPassword(!showConfirmPassword);
-                }}
-              />
-            ) : (
-              <BsEyeSlash
-                onClick={() => {
-                  setShowConfirmPassword(!showPassword);
-                }}
-              />
-            )}
+              <div className="form__group">
+                <input
+                  {...register("confirm_password")}
+                  placeholder="Confirm password"
+                  type={showConfirmPassword ? "text" : "password"}
+                />
+                {showConfirmPassword ? (
+                  <BsEye
+                    onClick={() => {
+                      setShowConfirmPassword(!showConfirmPassword);
+                    }}
+                  />
+                ) : (
+                  <BsEyeSlash
+                    onClick={() => {
+                      setShowConfirmPassword(!showPassword);
+                    }}
+                  />
+                )}
 
-            {errors.confirm_password?.message && (
-              <span>{errors.confirm_password?.message}</span>
-            )}
-          </div>
+                {errors.confirm_password?.message && (
+                  <span>{errors.confirm_password?.message}</span>
+                )}
+              </div>
 
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <button className="btnSubmit" type="submit">
-              Create account
-            </button>
-          </div>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <button className="btnSubmit" type="submit">
+                  Create account
+                </button>
+              </div>
 
-          <div className="or">
-            <span>Already a member? </span>
-            <span className="navigate">Sign in</span>
-          </div>
-        </form>
-      </section>
-    </div>
+              <div className="or">
+                <span>Already a member? </span>
+                <span
+                  className="navigate"
+                  onClick={() => {
+                    navigate("/register");
+                  }}
+                >
+                  Sign in
+                </span>
+              </div>
+            </form>
+          </section>
+        </div>
+      </Main>
+    </>
   );
 }
