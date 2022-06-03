@@ -1,5 +1,6 @@
 @import "../index.scss";
 
+
 .container-login {
     width: 100%;
     height: calc(100vh - $header-height);
@@ -9,6 +10,7 @@
     justify-content: center;
     background-image: url("https://img.freepik.com/free-photo/coffee-beans-with-props-making-coffee_1220-4536.jpg?w=2000");
     background-size: cover;
+
 
     & .form {
         width: 500px;

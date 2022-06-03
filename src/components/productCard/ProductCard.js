@@ -18,6 +18,7 @@ export default function ProductCard() {
 
       <div className="card-item__addToCart">
         <button>Thêm vào giỏ hàng</button>
+
       </div>
     </div>
   );

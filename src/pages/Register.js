@@ -118,6 +118,7 @@ export default function Register() {
                   className="navigate"
                   onClick={() => {
                     navigate("/login");
+
                   }}
                 >
                   Sign in
