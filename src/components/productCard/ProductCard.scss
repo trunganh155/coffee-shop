@@ -36,6 +36,7 @@
         }
 
         & .price {
+            font-size: 14px;
             color: #00000099;
         }
     }
@@ -44,6 +45,7 @@
         margin: 0 auto;
 
         & button {
+            margin-top: 10px;
             padding: 10px 20px;
             background-color: $green-color;
             color: #fff;
