@@ -33,12 +33,10 @@ export default function Login() {
   return (
     <>
       <Main>
-        <div className="container">
-          <section className="title">
-            <h1>Sign in</h1>
-          </section>
-
+        <div className="container-login">
           <section className="form">
+            <h1 className="title">Sign in</h1>
+
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="form__group">
                 <input
@@ -86,7 +84,7 @@ export default function Login() {
               </div>
 
               <div className="or">
-                <span>Not a member? </span>
+                <span style={{ color: "#ccc" }}>Not a member? </span>
                 <span
                   className="navigate"
                   onClick={() => {

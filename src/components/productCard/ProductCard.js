@@ -13,11 +13,11 @@ export default function ProductCard() {
 
       <div className="card-item__info">
         <span className="name">Trà Đào Túi Lọc</span>
-        <span className="price">28.000</span>
+        <span className="price">28.000₫</span>
       </div>
 
       <div className="card-item__addToCart">
-        <button>Add to cart</button>
+        <button>Thêm vào giỏ hàng</button>
       </div>
     </div>
   );
