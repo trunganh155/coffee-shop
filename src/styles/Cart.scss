@@ -1,0 +1,108 @@
+@import "../index.scss";
+
+.cart-page {
+    width: 100%;
+
+    padding: 2% 0px;
+
+    & .cart-container {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        font-size: 18px;
+
+        & .title {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        & .line {
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0px;
+            // margin-left: 5%;
+        }
+
+        & .left {
+            display: flex;
+            flex-direction: column;
+            gap: 20;
+            width: 40%;
+
+            & .address {
+                margin-bottom: 20px;
+            }
+
+            & .pay-option {
+                display: flex;
+                flex-direction: column;
+
+                & .radio-group {
+                    padding: 10px 0px;
+                    margin: 10px 0px;
+                    border-bottom: 1px solid #ccc;
+
+                    & label {
+                        font-size: 18px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        & .right {
+            display: flex;
+            flex-direction: column;
+            gap: 20;
+            width: 60%;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+
+            & .main {
+                padding: 20px;
+                & .selected {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20;
+                    margin-bottom: 20px;
+                }
+
+                & .total {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+
+                & .discount {
+                    color: $green-color;
+                }
+            }
+
+            & .order {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 60px;
+                background-color: $green-color;
+
+                & button {
+                    padding: 10px 30px;
+                    border: 0;
+                    border-radius: 50px;
+                    font-size: 16px;
+                    background-color: #fff;
+                    color: $green-color;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}

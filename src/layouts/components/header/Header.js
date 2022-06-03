@@ -1,9 +1,11 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Button from "~/components/button/Button";
 import "./Header.scss";
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <header className="header">
       <div className="container">
@@ -31,7 +33,12 @@ function Header() {
           </div>
           <div className="header-right">
             <div className="cart">
-              <span className="icon">
+              <span
+                className="icon"
+                onClick={() => {
+                  navigate("/cart");
+                }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

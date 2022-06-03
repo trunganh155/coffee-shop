@@ -4,7 +4,10 @@ import "./ModalDetail.scss";
 
 export default function ModalDetail() {
   return (
-    <>
+    <div
+      className="container"
+      style={{ display: "flex", justifyContent: "center" }}
+    >
       <div className="modal-detail">
         <section className="modal-detail__left">
           <div className="image">
@@ -62,6 +65,6 @@ export default function ModalDetail() {
           <button className="btnAdd">Thêm vào giỏ hàng</button>
         </section>
       </div>
-    </>
+    </div>
   );
 }

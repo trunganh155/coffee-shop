@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
 
 $header-height: 100px;
 $text-color: #212121;
 $green-color: #00754a;
 $red-color: #f32424;
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +12,7 @@ $red-color: #f32424;
 }
 html {
   font-size: 62.5%;
-  font-family: "Neuton", serif;
+  font-family: "Roboto", serif;
 }
 body {
   color: $text-color;

@@ -1,3 +1,4 @@
+import Cart from "~/pages/Cart";
 import Detail from "~/pages/Detail";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/Login";
@@ -28,5 +29,12 @@ const publicRoute = [
     url: "/detail",
     page: <Detail />,
   },
+  {
+    id: 5,
+    title: "Cart",
+    url: "/cart",
+    page: <Cart />,
+  },
 ];
 export { publicRoute };
+
