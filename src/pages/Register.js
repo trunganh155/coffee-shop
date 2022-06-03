@@ -39,12 +39,10 @@ export default function Register() {
   return (
     <>
       <Main>
-        <div className="container">
-          <section className="title">
-            <h1>Create an account</h1>
-          </section>
-
+        <div className="container-login">
           <section className="form">
+            <h1 className="title">Create an account</h1>
+
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="form__group">
                 <input {...register("username")} placeholder="Username" />
@@ -115,11 +113,12 @@ export default function Register() {
               </div>
 
               <div className="or">
-                <span>Already a member? </span>
+                <span style={{ color: "#ccc" }}>Already a member? </span>
                 <span
                   className="navigate"
                   onClick={() => {
-                    navigate("/register");
+                    navigate("/login");
+
                   }}
                 >
                   Sign in

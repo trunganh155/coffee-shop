@@ -1,16 +1,16 @@
 @import "../index.scss";
 
-.container {
+
+.container-login {
     width: 100%;
+    height: calc(100vh - $header-height);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url("https://img.freepik.com/free-photo/coffee-beans-with-props-making-coffee_1220-4536.jpg?w=2000");
+    background-size: cover;
 
-    & .title {
-        padding: 50px;
-        font-size: 20px;
-    }
 
     & .form {
         width: 500px;
@@ -18,9 +18,17 @@
         justify-content: center;
         flex-direction: column;
 
+        background-color: rgba(0, 0, 0, 0.4);
         padding: 40px;
         border-radius: 10px;
-        box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.8);
+
+        & .title {  
+            padding: 20px;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+        }
 
         &__group {
             position: relative;
@@ -31,7 +39,8 @@
                 padding: 12px 34px 12px 12px;
                 border: 1px solid #ccc;
                 border-radius: 8px;
-                font-size: 16px;
+                font-size: 18px;
+                font-family: "Neuton", serif;
             }
 
             & span {
@@ -42,7 +51,7 @@
 
             & svg {
                 position: absolute;
-                top: 22px;
+                top: 24px;
                 right: 14px;
                 transform: translateY(-50%);
                 font-size: 16px;
@@ -57,10 +66,11 @@
             & a {
                 color: $green-color;
                 text-decoration: none;
+                font-size: 14px;
 
                 &:hover {
                     text-decoration: underline;
-                    opacity: 0.6;
+                    opacity: 0.8;
                 }
             }
         }
@@ -78,7 +88,7 @@
             box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
 
             &:hover {
-                opacity: 0.6;
+                opacity: 0.8;
             }
         }
 
@@ -93,7 +103,7 @@
                 cursor: pointer;
 
                 &:hover {
-                    opacity: 0.6;
+                    opacity: 0.8;
                     text-decoration: underline;
                 }
             }
