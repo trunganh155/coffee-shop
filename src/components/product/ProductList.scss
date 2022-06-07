@@ -1,0 +1,12 @@
+.product-list {
+  background-color: #fff;
+  .wrapper-produc-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    .product-item {
+      width: 16.66667%;
+      padding: 10px;
+    }
+  }
+}
