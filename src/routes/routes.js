@@ -37,4 +37,3 @@ const publicRoute = [
   },
 ];
 export { publicRoute };
-

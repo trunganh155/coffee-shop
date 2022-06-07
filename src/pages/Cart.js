@@ -1,5 +1,7 @@
 import Main from "~/layouts/Main";
 import "../styles/Cart.scss";
+import { RiEdit2Fill } from "react-icons/ri";
+import { MdDelete } from "react-icons/md";
 
 export default function Cart() {
   return (
@@ -26,7 +28,7 @@ export default function Cart() {
                       id="cash"
                       name="option"
                       value="cash"
-                      checked
+                      defaultChecked
                     />
                     <label for="cash">Tiền mặt</label>
                   </div>
@@ -47,10 +49,35 @@ export default function Cart() {
                 <div className="main">
                   <span className="title">Các món đã chọn</span>
                   <div className="selected">
-                    <span>Latte Nóng 1</span>
-                    <span>Latte Nóng 2</span>
-                    <span>Latte Nóng 3</span>
-                    <span>Latte Nóng 4</span>
+                    <table>
+                      <tr>
+                        <td>
+                          <RiEdit2Fill />
+                        </td>
+                        <td className="selected__detail">
+                          <span className="name">Latte Nóng 1 </span>
+                          <span className="size">Size M </span>
+                        </td>
+                        <td className="selected__price">35000₫</td>
+                        <td>
+                          <MdDelete />
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <RiEdit2Fill />
+                        </td>
+                        <td className="selected__detail">
+                          <span className="name">Latte Nóng 1 </span>
+                          <span className="size">Size M </span>
+                        </td>
+                        <td className="selected__price">35000₫</td>
+                        <td>
+                          <MdDelete />
+                        </td>
+                      </tr>
+                    </table>
                   </div>
 
                   <span className="title">Tổng cộng</span>
