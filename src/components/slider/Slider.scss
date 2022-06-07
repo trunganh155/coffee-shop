@@ -1,0 +1,13 @@
+@import "../../index.scss";
+
+.slider {
+  background-color: #000;
+  padding: 10px;
+  .swiper-pagination-bullet {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.8);
+  }
+}
